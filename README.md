@@ -6,6 +6,19 @@
 
 重新写了读取配置，现在配置可以生成在用户目录下了（我觉得这样很优雅），废弃了bat文件，使用了docopt库，用setup.py安装到scripts中。
 
+## 快速入门
+```bash
+> git clone https://github.com/ZenSky123/liberty.git
+> cd liberty
+> python setup install
+> connect init
+请输入连接名称(拨号连接的名称， 如果没有请创建一个)：hasaki
+请输入用户名：[your username]
+请输入密码：[your password]
+> connect
+```
+
+
 具体使用如：
 ```text
 Elegant for Internet
