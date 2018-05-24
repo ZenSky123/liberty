@@ -4,7 +4,8 @@ Usage:
     connect
     connect init
     connect show
-    connect <password>
+    connect <password> [--username=<username>]
+
 
 
 Options:
@@ -45,6 +46,10 @@ def main():
         show()
     else:
         connect_name, username, password = load_config()
+        if arguments['--username']:
+            username = arguments['--username']
+            print('读取命令行配置！', username)
+            update_config(username=username)
         if arguments['<password>']:
             password = arguments['<password>']
             update_config(password=password)
